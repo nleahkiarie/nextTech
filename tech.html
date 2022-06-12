@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next web</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="fontawasome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400&display=swap" rel="stylesheet"> 
+<style>
+    *{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar{
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_logo{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #990000 0%, #ffee63 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* .fa-gem{
+    margin-right: 0.5rem;
+} */
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item{
+    height: 80px;
+}
+
+.navbar_links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   padding: 10px 20px;
+   height: 100%;
+   width: 100%;
+   border: none;
+   outline: none;
+   border-radius: 4px;
+   background: #e49164;
+   color: #fff;
+}
+
+.button:hover{
+    background: #4FD3C4;
+    transition: all 0.3s ease;
+}
+
+.navbar_links:hover{
+    color: aquamarine;
+    transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 960px) {
+ .navbar_container{
+     display: flex;
+     justify-content: space-between;
+     height: 60px;
+     z-index: 1;
+     width: 100%;
+     max-width: 1300px;
+     padding: 0;
+ }
+ .navbar_menu{
+     display: grid;
+     grid-template-columns: auto;
+     margin: 0;
+     width: 100%;
+     position: absolute;
+     top: -1000px;
+     opacity: 0;
+     transition: all 0.5s ease;
+     height: 40vh;
+     z-index: -1;
+     background: #131131;
+ }
+ .navbar_menu.active{
+     background: #131131;
+     top: 100%;
+     opacity: 1;
+     transition: all 0.5s ease;
+     z-index: 99;
+     height: 40vh;
+     font-size: 1.6rem;
+ }
+ #navbar_logo{
+    padding-left: 25px;
+ }
+ .navbar_toggle .bar{
+     width: 25px;
+     height: 2px;
+     margin: 5px auto;
+     transition: all 0.3s ease-in-out;
+     background: #fff;
+ }
+ .navbar_item{
+     width: 100%;
+ }
+ .navbar_links{
+     text-align: center;
+     display: table;
+     padding: 2rem;
+     width: 100%;
+ }
+ #mobile-menu{
+     position: absolute;
+     top: 20%;
+     right: 5%;
+     transform: translate(5%, 20%);
+ }
+ .navbar_btn{
+     padding-bottom: 2rem;
+ }
+ .button{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 80%;
+     height: 40px;
+     margin: 0;
+ }
+ .navbar_toggle .bar{
+     display: block;
+     cursor: pointer;
+ }
+ #mobile-menu.is-active .bar:nth-child(2){
+     opacity: 0;
+ }
+ #mobile-menu.is-active .bar:nth-child(1){
+transform: translateY(8px) rotate(45deg);
+ }
+ #mobile-menu.is-active .bar:nth-child(3){
+     transform: translate(-8px) rotate(-45deg);
+ }
+}
+/* hero section css */
+.main{
+    background-color: #141414;
+}
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 outo;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+.main__content h1{
+    font-size: 4rem;
+    background-color: #990000;
+    background-image: linear-gradient(to top, #990000 0%, #ffee63 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.main__content h2{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #eb0793 0%, #6EDCD9 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.main__content p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #C1F8CF;
+}
+
+.main__btn{
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #4700D8 0%, #C1F8CF 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.main__btn a{
+    position: relative;
+    z-index: none;
+    text-decoration: none;
+    color: hwb(0 91% 3%);
+}
+.main__btn:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #9985c2;
+    transition: all 0.3s;
+    border-radius: 4px;
+
+}
+
+.main__btn:hover{
+    color: #fff;
+}
+.main__btn:hover:after{
+    width: 100%;
+}
+.main_img-container{
+    text-align: center;
+}
+#main_img{
+    height: 80%;
+    width: 80%;
+}
+/* mobile responsive */
+@media screen and(max-width: 960px){
+    .main__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+    .main__content{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .main__content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+    .main__content h2{
+        font-size: 3rem;
+    }
+    .main__content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+@media screen and(max-width:480px){
+    .main__content h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    .main__content h2{
+        font-size: 2rem;
+    }
+    .main__content p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .main__btn{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* services section */
+.services{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.services h1{
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%,
+    #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b1215b 100%
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;  
+    margin-bottom: 5rem;
+    background-size: 100%;
+    font-size: 2.5rem;  
+}
+.services__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+.services__card{
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%),
+    url("/images/pic6.jpg");
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+.services__card:nth-child(2){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%),
+    url("/images/pic7.jpg");
+}
+.services h2{
+    position: absolute;
+    top: 350px;
+    left: 30px;
+ }
+.services__card p{
+    position: absolute;
+    top: 400px;
+    left: 30px;
+}
+.services__card button{
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ff8c7f;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.services__card:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+}
+@media screen and (max-width: 960px){
+    .services{
+        height: 1600px;
+    }
+    .services h1{
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+@media screen and(max-width: 480px){
+.services{
+    height: 1400px;
+}
+.services h1{
+    font-size: 1.2rem;
+}
+.services__card{
+    width: 300px;
+}
+}
+/* footer css */
+.footer__container{
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer__logo{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.footer__links{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.footer__link--wraper{
+    display: flex;
+}
+.footer__link--items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+.footer__link--items h2{
+    margin-bottom: 16px;
+}
+.footer__link--items > h2{
+    color: #fff;
+}
+.footer__link--items a{
+    color: #f0f8ff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer__link--items:hover{
+    color: #6EDCD9;
+    transition: 0.3s ease-out;
+}
+.social__icon--link{
+    color: #f0f8ff;
+    font-size: 24px;
+}
+.social__media{
+    width: 100%;
+    max-width: 1000px;
+}
+.social__media--wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    min-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+.social__icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+.social__logo{
+    color: aliceblue;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.website__rights{
+    color: aliceblue;
+}
+
+@media screen and(max-width: 820px){
+    .footer__links{
+        padding-top: 2rem;
+    }
+    #footer__logo{
+        margin-bottom:2rem;
+    }
+    .website__rights{
+        margin-bottom: 2rem;
+    }
+    .footer__link--wraper{
+        flex-direction: column;
+    }   
+    .social__media--wrap{
+        flex-direction: column;
+    }
+}
+@media screen and(max-width: 480px){
+    .footer__link--items{
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- collapsible navbar -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="/" id="navbar_logo"><i class="fas fa-gem"></i> NEXT</a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item"><a href="/" class="navbar_links">home</a></li>
+                <li class="navbar_item"><a href="tech.html" class="navbar_links">tech</a></li>
+                <li class="navbar_item"><a href="tech.html" class="navbar_links">products</a></li>
+                <li class="navbar_btn"><a href="tech.html" class="button">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--hero section-->
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>IT IS ALL ABOUT</h1>
+            <h2>TECHNOLOGY</h2>
+            <p>See what we have!!</p>
+            <!-- <button class="main__btn"><a href="/">Get Started</a></button> -->
+        </div>
+        <div class="main_img-container">
+            <img src="images/pic11.svg" alt="pic" id="main_img">
+        </div>
+    </div>
+</div>
+<!-- service section -->
+<div class="services">
+    <h1>See what this hype is all about</h1>
+    <div class="services__container">
+        <div class="services__card">
+            <h2>Experience bliss</h2>
+            <p>AI powered technology</p>
+            <button>Get Started</button>   
+        </div>
+        <div class="services__card">
+            <h2>Are you ready?</h2>
+            <p>Take the leap</p>
+            <button>Get Started</button>   
+        </div>
+    </div>
+</div>
+<!-- footer section -->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wraper">
+            <div class="footer__link--items">
+                <h2>About us</h2>
+                <a href="/">How it works</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of service</a>
+            </div>
+            <div class="footer__link--items">
+                <h2>Contact us</h2>
+                <a href="/">How it works</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of service</a>
+            </div>
+        </div>
+        <div class="footer__link--wraper">
+            <div class="footer__link--items">
+                <h2>Social media</h2>
+                <a href="/">facebook</a>
+                <a href="/">Youtube</a>
+                <a href="/">instagram</a>
+                <a href="/">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo"><i class="fas fa-gem"></i>NEXT</a>
+            </div>
+            <p class="website__rights"> NEXT 2020. &copy All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
